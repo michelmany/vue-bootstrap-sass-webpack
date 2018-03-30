@@ -1,0 +1,34 @@
+
+@mixin mq-min($screen-width)
+    @media screen and (min-width: $screen-width + px)
+        @content
+    
+
+
+@mixin mq-max($screen-width)
+    @media screen and (max-width: $screen-width + px)
+        @content
+    
+
+
+@function tracking( $target )
+  @return ($target / 1000) * 1em
+
+
+@mixin tracking( $target )
+  letter-spacing: tracking( $target )
+
+
+@mixin placeholder
+    &::-webkit-input-placeholder
+        @content
+    
+    &:-moz-placeholder /* Firefox 18- */
+        @content
+    
+    &::-moz-placeholder  /* Firefox 19+ */
+        @content
+    
+    &:-ms-input-placeholder
+        @content
+    

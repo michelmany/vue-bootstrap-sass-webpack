@@ -1,0 +1,65 @@
+
+.no-container-on-mobile
+    @include mq-min(768)
+        margin-left: auto
+        margin-right: auto
+        max-width: 690px
+
+    @include mq-min(992)
+        max-width: 930px
+
+    @include mq-min(1200)
+        max-width: 1110px
+
+.container-only-desktop
+    @include mq-min(992)
+        margin-left: auto
+        margin-right: auto
+        max-width: 930px
+
+    @include mq-min(1200)
+        max-width: 1110px
+
+.section-full-height
+    align-items: center!important
+    display: flex!important
+    min-height: 100vh!important
+
+    @include mq-min(992)
+        height: $section-min-height-lg        
+
+.link-underline
+    text-decoration: underline
+
+span.highlighted
+    position: relative
+    z-index: 9
+
+    &:before
+        content: ""
+        display: block
+        background: $brand-yellow
+        height: 50%
+        width: 98%
+        position: absolute
+        left: 4%
+        top: 56%
+        z-index: -1
+
+.bg-off-white
+    background: $off-white        
+
+.wrapper
+    padding-top: 50px
+    padding-bottom: 50px
+
+    @include mq-min(768)
+        padding-top: 82px
+        padding-bottom: 82px
+
+.h-list-categories-comma
+    span
+        &:after
+            content: ","
+        &:last-child:after
+            content: ""
